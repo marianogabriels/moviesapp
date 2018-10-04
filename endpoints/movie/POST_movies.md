@@ -1,51 +1,57 @@
-# Movie Resources
+# Photo Resources
 
-    POST /api/v1/movies
+    POST photos
 
 ## Description
-Returns a listing of movies
+Create a new Movie 
 
 ***
 
-## Pubic method
+## Requires authentication
+`headers: 'TOKEN'= 'exampletoken'`
 
+***
 
 ## Parameters
+Essential information:
+
+- **title** — Title of the Movie
+- **release_year** — Release year for the movie
+
+
+***
 
 ## Errors
-None
+All known errors cause the resource to return HTTP error code header together with a JSON array containing at least 'status' and 'error' keys describing the source of error.
+
+- **422 Unprocessable Entity** — The system had trouble saving the record. You may retry again.
 
 ***
 
 ## Example
 **Request**
 
-    https://evening-hollows-9577.herokuapp.com/api/v1/movies/
-
-**Return** __shortened for example purpose__
-``` json
-[
-{"id": 2,
- "last_name": "Eastwood",
- "first_name": "Clinton",
- "aliases": "Clint Eastwood",
- "directions": 
-  [{"id": 2,
-    "title": "Grand Torino",
-    "release_year": 2006,
-    "created_at": "2018-10-04T03:22:03.012Z",
-    "updated_at": "2018-10-04T03:22:03.012Z"}],
- "performances": 
-  [{"id": 2,
-    "title": "Grand Torino",
-    "release_year": 2006,
-    "created_at": "2018-10-04T03:22:03.012Z",
-    "updated_at": "2018-10-04T03:22:03.012Z"}],
- "productions": 
-  [{"id": 2,
-    "title": "Grand Torino",
-    "release_year": 2006,
-    "created_at": "2018-10-04T03:22:03.012Z",
-    "updated_at": "2018-10-04T03:22:03.012Z"}]}
-]
+```bash
+    curl https://evening-hollows-9577.herokuapp.com/api/v1/movies/ -H "Content-Type: application/json" -H 'TOKEN: secret'  -d '{
+      "title": "Grand Torino", 
+      "release_year": 2006
+   }'
 ```
+    
+
+
+**Return**
+``` json
+{
+  "title": "Grand Torino",
+  "release_year": 2006,
+  "directors": [
+  ],
+  "casting": [
+  ],
+  "producers": [
+  ],
+  "roman_release_year": "MMVI"
+}
+```
+
