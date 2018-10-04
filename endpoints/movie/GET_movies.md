@@ -21,37 +21,39 @@ None
 ``` json
 [
   {
-    "id": 2,
-    "last_name": "Eastwood",
-    "first_name": "Clinton",
-    "aliases": "Clint Eastwood",
-    "directions": [
+    "title": "Grand Torino",
+    "release_year": 2006,
+    "directors": [
       {
         "id": 2,
-        "title": "Grand Torino",
-        "release_year": 2006,
-        "created_at": "2018-10-04T03:22:03.012Z",
-        "updated_at": "2018-10-04T03:22:03.012Z"
+        "last_name": "Eastwood",
+        "first_name": "Clinton",
+        "aliases": "Clint Eastwood",
+        "created_at": "2018-10-04T03:22:03.007Z",
+        "updated_at": "2018-10-04T03:22:03.007Z"
       }
     ],
-    "performances": [
+    "casting": [
       {
         "id": 2,
-        "title": "Grand Torino",
-        "release_year": 2006,
-        "created_at": "2018-10-04T03:22:03.012Z",
-        "updated_at": "2018-10-04T03:22:03.012Z"
+        "last_name": "Eastwood",
+        "first_name": "Clinton",
+        "aliases": "Clint Eastwood",
+        "created_at": "2018-10-04T03:22:03.007Z",
+        "updated_at": "2018-10-04T03:22:03.007Z"
       }
     ],
-    "productions": [
+    "producers": [
       {
         "id": 2,
-        "title": "Grand Torino",
-        "release_year": 2006,
-        "created_at": "2018-10-04T03:22:03.012Z",
-        "updated_at": "2018-10-04T03:22:03.012Z"
+        "last_name": "Eastwood",
+        "first_name": "Clinton",
+        "aliases": "Clint Eastwood",
+        "created_at": "2018-10-04T03:22:03.007Z",
+        "updated_at": "2018-10-04T03:22:03.007Z"
       }
-    ]
+    ],
+    "roman_release_year": "MMVI"
   }
 ]
 ```
